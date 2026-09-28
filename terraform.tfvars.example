@@ -1,0 +1,4 @@
+aws_region        = "ap-south-2"
+vpc_cidr          = "172.16.0.0/16"
+availability_zone = "ap-south-2a"
+subnet_cidr       = "172.16.10.0/24"
