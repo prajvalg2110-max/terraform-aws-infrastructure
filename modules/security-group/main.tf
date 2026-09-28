@@ -1,7 +1,7 @@
 resource "aws_security_group" "my_sg" {
   name        = "my_sg"
   description = "Allow TLS inbound traffic and all outbound traffic"
-  vpc_id      = aws_vpc.my_vpc.id
+  vpc_id      = var.vpc_id
 
   tags = {
     Name = "my_sg"
@@ -29,4 +29,3 @@ resource "aws_vpc_security_group_egress_rule" "allow_all_traffic_ipv4" {
   cidr_ipv4         = "0.0.0.0/0"
   ip_protocol       = "-1" # semantically equivalent to all ports
 }
-
